@@ -1,0 +1,3 @@
+修改记录：
+1.cache/adminlogin_logs.php  记录改为了adminlogin_logs.zip，用了常用密码加密
+2.data/mysql_config.php密码修改了，原来为15位，现在改为$dbpw = 'password';	
