@@ -1,0 +1,137 @@
+<!--
+<?php
+include(dirname(__FILE__)."/map.php");
+print <<<EOT
+-->
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="baseinfo">
+  <tr>
+    <td class="infoleft">
+    	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="memberdt">
+          <tr>
+            <td class="head">
+            	<div class="FL">会员动态</div>
+                <div class="FR">
+<!--
+EOT;
+if($pmNUM){print <<<EOT
+-->
+            		<a href="pm.php?job=list" style="color:red;">你有新的消息,请注意查收!!</a> 
+<!--
+EOT;
+}else{print <<<EOT
+-->
+            		<a href="pm.php?job=list">你暂时没有新消息!</a> 
+<!--
+EOT;
+}print <<<EOT
+-->
+                </div>
+            </td>
+          </tr>
+          <tr>
+            
+          <td class="cont"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="info1">
+                  <tr>
+                    <td>
+                    	<div>主页浏览: {$lfjdb[hits]} 次</div>
+                        <div>　</div>
+                        <div>　</div>
+                        <div>　</div>
+                        <div>　</div>
+                        <div>　</div>
+                    </td>
+                  </tr>
+                </table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="spaceTable">
+                  <tr> 
+                    <td>
+                        你的{$webdb[MoneyName]}: <img src="images/money.gif"> 
+                       <span> $lfjdb[money]</span> {$webdb[MoneyDW]} (<a href="../do/jf.php" target="_blank">如何获取{$webdb[MoneyName]}?</a>)<br/>
+                        空间容量: {$space_system} + {$space_group} + {$space_user} - {$lfjdb[usespace]}  = <em>{$onlySpace}</em> M(兆)<br/>
+                        空间算法: 系统容量 + 用户组容量 + 自身容量 - 已用空间 = 剩余空间 
+                    </td>
+                  </tr>
+                </table>
+                
+            <div id="ifcompany">欢迎到来!</div>
+            </td>
+          </tr>
+        </table>
+    </td>
+    <td class="inforight">
+    	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="myinfo">
+          <tr>
+            <td class="head">我的个人资料</td>
+          </tr>
+          <tr>
+            <td class="cont">
+            	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="picword">
+                  <tr>
+                    <td class="pic"><img src="$lfjdb[icon]" onerror="this.src='../images/default/noface.gif'" width="80" height="80"></td>
+                    <td class="word">
+                    	用户UID: <span>$lfjuid</span><br/>
+                        帐号: <span>$lfjid</span><br/>
+                        级别: <span>$groupdb[grouptitle]</span> ({$lfjdb[C][endtime]})
+                    </td>
+                  </tr>
+                </table>
+				<div class="more">
+                	邮箱: <span>$lfjdb[email]</span> <br/>
+                    所在城市: <em>{$area_db[name][$lfjdb[provinceid]]} {$area_db[name][$lfjdb[cityid]]}</em><br/>
+                    注册时间: <span>$lfjdb[regdate]</span> <br/>
+                    上次登录时间: <span>$lfjdb[lastvist]</span> 
+                </div>
+            </td>
+          </tr>
+        </table>
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="usersorttable">
+  <tr>
+    <td class="head">会员服务栏目</td>
+  </tr>
+  <tr>
+    <td class="cont">
+    	<div class="listsort div1">
+        	
+        <div class="m">完善的站内搜索站内搜索</div>
+            <div class="c">方便查找资料</div>
+        </div>
+        <div class="listsort div2">
+        	<div class="m">灵活的模块组合 </div>
+            <div class="c">让网站扩展更方便</div>
+        </div>
+        <div class="listsort div3">
+        	<div class="m">方便升级</div>
+            <div class="c">可以平滑过度升级</div>
+        </div>
+        <div class="listsort div4">
+        	
+        <div class="m">实用的博客</div>
+            <div class="c">让网友可以记录生活点滴</div>
+        </div>
+        <div class="listsort div5">
+        	<div class="m">良好的用户口碑</div>
+            <div class="c">实用、易用是我们的宗旨</div>
+        </div>
+        <div class="listsort div6">
+        	<div class="m">灵活的邮件模块</div>
+            <div class="c">让网站扩展更方便</div>
+        </div>
+        <div class="listsort div7">
+        	<div class="m">灵活的万能表单</div>
+            <div class="c">可方便的进行二次开发</div>
+        </div>
+        <div class="listsort div8">
+        	<div class="m">灵活的插件</div>
+            <div class="c">可自由安装卸载</div>
+        </div>
+    </td>
+  </tr>
+</table>
+<!--
+EOT;
+?>
+-->

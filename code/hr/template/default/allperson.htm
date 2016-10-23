@@ -1,0 +1,109 @@
+<!--
+<?php
+$ordertype = $ordertype ? $ordertype : "id";
+$select[$ordertype] = "ch";
+print <<<EOT
+--> 
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/yellow/person_listall.css">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="listalltable">
+  <tr>
+    <td class="main">
+    	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="dragTable">
+          <tr>
+            <td class="head">
+            	<span class="FL">人才列表</span>
+                <span class="FR">
+                	<a href="?ordertype=" class="$select[id]">最新简历</a>
+                    <a href="?ordertype=hits" class="$select[hits]">最关注人才</a>
+                    <a href="?ordertype=levelstime" class="$select[levelstime]">推荐人才</a>
+                </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="cont">
+            	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="listjob">
+                  <tr class="h">
+                    <td class="td1">姓名</td>
+                    <td class="td2">性别</td>
+                    <td class="td3">年龄</td>
+                    <td class="td4">工作年限</td>
+                    <td class="td5">更新日期</td>
+                    <td class="td6">查看</td>
+                  </tr>
+<!--
+EOT;
+$i=0;
+foreach($listdb AS $key=>$rs){
+$i++;
+$class=($i%2==1)?'aa':'bb';
+print <<<EOT
+-->
+                  <tr class="list  $class">
+                    <td class="td1">{$rs[truename]}</td>
+                    <td class="td2">{$rs[sex]}</td>
+                    <td class="td3">{$rs[age]} 岁</td>
+                    <td class="td4">{$rs[workyear]}</td>
+                    <td class="td5">$rs[posttime]</td>
+                    <td class="td6"><a href="$Murl/joinshow.php?id=$rs[id]" target=_blank>查看</a></td>
+                  </tr>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+                  
+                </table>	
+<!--
+EOT;
+if($showpage){print <<<EOT
+-->
+			  <div class="page">$showpage</div>
+<!--
+EOT;
+}print <<<EOT
+-->
+            </td>
+          </tr>
+        </table>
+    </td>
+    <td class="side">
+    	<div class="shopsort">
+        	<div class="head"><span>职位分类</span></div>
+            <div class="cont">
+<!--
+EOT;
+$j=0;
+foreach($Fid_db[0] AS $key=>$name){
+$j++;
+$name=get_word($name,20);
+print <<<EOT
+-->
+				
+          <div class="bigsort list$j"><a href="list.php?fid=$key" target="_blank">$name</a></div>
+                
+          <div class="sort"> 
+            <!--
+EOT;
+foreach($Fid_db[$key] AS $fid=>$name ){
+$name=get_word($name,24);
+print <<<EOT
+-->
+            <a href="list.php?fid=$fid" target="_blank">$name</a> | 
+            <!--
+EOT;
+}print <<<EOT
+-->
+          </div>
+<!--
+EOT;
+}print <<<EOT
+-->
+            </div>
+        </div>
+    </td>
+  </tr>
+</table>
+<!--
+EOT;
+?>
+-->

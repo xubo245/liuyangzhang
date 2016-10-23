@@ -1,0 +1,67 @@
+<!--
+<?php
+print <<<EOT
+--> 
+<script src="images/default/setday.js"></script>
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/enterprise/form/form.css">
+<div class="mainbanner">{$label[enterprise_form1]}</div>
+<div class="nav_guide">
+   <a href="$webdb[www_url]">首页</a> $GuideFid[$fid]
+</div>
+<div class="MainContainer">
+	<div class="side">
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+document.write('<div id="Index_Login">$Load_Msg</div>');
+document.write('<div style="display:none;"><iframe src="$webdb[www_url]/do/hack.php?hack=login&styletype=introduce&iframeID=Index_Login" width=0 height=0></iframe></div>');
+//-->
+</SCRIPT>
+		<div class="Services">
+        	<div class="head">{$label[enterprise_form2]}</div>
+            <div class="cont">{$label[enterprise_form3]}</div>
+        </div>
+    </div>
+    <div class="main">
+    	<div class="listtitle">
+        	<div class="head">$fidDB[name]</div>
+            <div class="cont">
+<script>
+function upfile(url,name,size,ty){
+	document.getElementById(ty).value=url;
+}
+</script>
+				<div class="about">$fidDB[about]</div>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" id="bigtable">
+                <form name="FORM" method="post" action="?action=$atc" enctype="multipart/form-data">
+<!--
+EOT;
+if($fidDB[usetitle]){print <<<EOT
+-->
+					<tr>
+                    	<td class=tdl>标题:<span>*</span></td>
+                        <td class=tdr><input type="text" name="postdb[title]" id="atc_title" size="50" value="$rsdb[title]"></td>
+                    </tr>                    
+<!--
+EOT;
+}print <<<EOT
+-->
+					<tr> <td class=tdl>姓名:<span>*</span><br></td> <td class=tdr> <input class='text' type='text' name='postdb[my_name]' id='atc_my_name' size='10' value='$rsdb[my_name]'> </td></tr><tr> <td class=tdl>联系电话:<span>*</span><br></td> <td class=tdr> <input class='text' type='text' name='postdb[my_phone]' id='atc_my_phone' size='20' value='$rsdb[my_phone]'> </td></tr><tr> <td class=tdl>联系邮箱:<br></td> <td class=tdr> <input class='text' type='text' name='postdb[my_mail]' id='atc_my_mail' size='30' value='$rsdb[my_mail]'> </td></tr><tr><td class=tdl>附注信息:<br></td><td class=tdr><iframe id='eWebEditor1' src='$webdb[www_url]/ewebeditor/ewebeditor.php?id=atc_content&style=standard&&etype=1' frameborder='0' scrolling='no' width='90%' height='250'></iframe><input name='postdb[content]' id='atc_content' type='hidden' value='$rsdb[content]'></td></tr>
+	
+                    <tr> 
+                      <td class=tdl>&nbsp;</td>
+                      <td class=tdr> <input name="Submit" type="image" src="$webdb[www_url]/images/enterprise/form/subpost.gif" class="sub"/>
+                        <input type="hidden" name="mid" value="$mid">
+                        <input type="hidden" name="id" value="$id">
+                      </td>
+                    </tr>
+                  </form>
+                 </table>  
+            </div>
+        </div>
+    </div>
+    <div class="cleardiv"></div>
+</div>
+<!--
+EOT;
+?>
+-->

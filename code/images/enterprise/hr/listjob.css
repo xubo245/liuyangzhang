@@ -1,0 +1,184 @@
+/*页面地图*/
+.nav_guide{
+	margin-top:5px;
+	height:29px;
+	overflow:hidden;
+	line-height:33px;
+	padding-left:25px;
+	color:#777;
+	background:url(guide.gif) center top no-repeat;
+}
+.nav_guide a:link,.nav_guide a:visited,.nav_guide a:hover{
+	color:#777;
+}
+/*页面定位*/
+.MainContainer{
+	margin-top:10px;
+}
+.MainContainer .side{
+	width:220px;
+	float:left;
+}
+.MainContainer .main{
+	width:756px;
+	float:right;
+}
+/*
+*栏目样式
+*/
+.sortcont{
+	padding-bottom:10px;
+	background:url(sortbg.gif) left bottom no-repeat;
+}
+.sortcont .head{
+	height:45px;
+	line-height:40px;
+	background:url(sortbg.gif) left top no-repeat;
+	padding-left:15px;
+	font-size:14px;
+	font-weight:bold;
+	color:#FFF;
+}
+.sortcont .cont dl{
+	background:url(sortbg.gif) left -40px no-repeat;
+	padding-bottom:5px;
+}
+.sortcont .cont dl dt{
+	height:25px;
+	background:url(bigsort.gif) center top no-repeat;
+	overflow:hidden;
+	line-height:25px;
+	padding-left:40px;
+	padding-right:20px;
+	font-weight:bold;
+}
+.sortcont .cont dl dd{
+	padding-left:40px;
+	padding-top:8px;
+	padding-right:20px;
+	line-height:20px;
+}
+.sortcont .cont dl dd a{
+	color:#888;
+}  
+
+.leftadcont{
+	margin-top:10px;
+	width:220px;
+	overflow:hidden;
+}
+.hotlinecont{
+	margin-top:10px;
+	background:url(telbg.gif) left top no-repeat;
+	padding:15px 0 0 75px;
+	line-height:20px;
+	color:#FFF;
+}
+.hotlinecont .tel{
+	font-size:18px;
+	font-weight:bold;
+}
+.hotlinecont .l{
+	padding-top:8px;
+}
+.hotlinecont .l a{
+	color:#00499B;
+	text-decoration:underline;
+}
+/*
+*内容样式
+*/
+.listtitle .head{
+	height:55px;
+	overflow:hidden;
+	line-height:65px;
+	background:url(head1.gif) left top no-repeat;
+	padding-left:35px;
+	color:#378DE4;
+	font-size:20px;
+	font-weight:bold;
+}
+.listtitle .cont{
+	border:#D6E1F5 solid 1px;
+	border-top:0;
+	padding:0 20px 20px 20px;
+}
+.listtitle .cont .listjob td{
+	line-height:35px;
+	border-bottom:#CBCBCB dotted 1px;
+	text-align:center;
+}
+.listtitle .cont .listjob td.td1{
+	width:28%;
+	text-align:left;
+	padding-left:15px;
+}
+.listtitle .cont .listjob td.td2,.listtitle .cont .listjob td.td3,.listtitle .cont .listjob td.td4{
+	width:12%;
+}
+.listtitle .cont .listjob td.td5,.listtitle .cont .listjob td.td6{
+	width:18%;
+	color:#888;
+}
+.listtitle .cont .listjob .h td{
+	color:#D15500;
+	font-weight:bold;
+	border-bottom:#D15500 solid 1px;
+}
+.listtitle .cont .listjob .c2 td{
+	background:#FAFBFF;
+}
+.listtitle .cont .listjob .c2 td.td1{
+	background:#FAFBFF url(array1.gif) 5px 15px no-repeat;
+}
+.listtitle .cont .listjob .c1 td.td1{
+	background:url(array2.gif) 5px 15px no-repeat;
+}
+.listtitle .cont .listjob td a{
+	color:#2B9FD5;
+}
+/*
+*分页显示
+*/
+.listtitle .cont .page{
+	padding-top:15px;
+	height:25px;
+	width:100%;
+}
+.listtitle .cont .page div{
+	margin:auto;
+	width:400px;
+	height:25px;
+}
+.listtitle .cont .page div a,.listtitle .cont .page div span{
+	display:block;
+	float:left;
+	padding:0 12px 0 12px;
+	background:url(page3.gif) center top no-repeat;
+	height:25px;
+	line-height:25px;
+	color:#2864A2;
+}
+.listtitle .cont .page div a:hover{
+	text-decoration:none;
+}
+.listtitle .cont .page div a.pb,.listtitle .cont .page div a.pe{
+	background:url(page0.gif) center top no-repeat;
+}
+.listtitle .cont .page div a.up,.listtitle .cont .page div a.next{
+	background:url(page1.gif) center top no-repeat;
+}
+.listtitle .cont .page div a.ck{
+	background:url(page2.gif) center top no-repeat;
+	font-weight:bold;
+	color:#FFF;
+}
+.listtitle .cont .page div span{
+	background:url(page4.gif) center top no-repeat;
+	padding:0 22px 0 22px;
+	color:#999;
+}
+.listtitle .cont .page div span em{
+	color:#f00;
+	font-style:normal;
+}

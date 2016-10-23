@@ -1,0 +1,421 @@
+/**************************************
+********************首页样式
+*******************************************/
+.MainContainer{
+	margin-top:10px;
+}
+.MainContainer .main{
+	width:700px;
+	float:left;
+}
+.MainContainer .side{
+	width:280px;
+	float:right;
+}
+/*
+*第一栏
+*/
+.Maincont1{
+	height:250px;
+}
+.slidecont{
+	width:700px;
+	height:250px;
+	overflow:hidden;
+}
+.newscont{
+	height:250px;
+	overflow:hidden;
+	background:url(newsbg.gif) center top no-repeat;
+}
+.newscont .head{
+	height:35px;
+	overflow:hidden;
+	padding:0 10px 0 30px;
+	line-height:40px;
+	color:#FFF;
+}
+.newscont .cont{
+	padding:10px;
+	line-height:22px;
+}
+.newscont .cont .list{
+	height:22px;
+	overflow:hidden;
+	padding-left:15px;
+	padding-right:3px;
+	background:url(array1.gif) 5px 8px no-repeat;
+}
+.newscont .cont .list a{
+	float:left;
+	color:#3074C1;
+}
+.newscont .cont .list span{
+	float:right;
+	color:#888;
+}
+/*
+*第二栏
+*/
+.Maincont2{
+	height:730px;
+}
+.Products{
+	height:450px;
+	overflow:hidden;
+	background:url(products.gif) center top no-repeat;
+}	
+.Products .head{
+	height:35px;
+	overflow:hidden;
+	padding:0 10px 0 30px;
+	line-height:40px;
+}
+.Products .cont{
+	padding:10px 0 0 10px ;
+}
+.Products .cont dl{
+	width:340px;
+	height:130px;
+	overflow:hidden;
+	float:left;
+	background:url(dotted.gif) left bottom repeat-x;
+	padding:0;
+}
+.Products .cont .list5,.Products .cont .list6{
+	background:none;
+}
+.Products .cont dl dt{
+	width:150px;
+	height:130px;
+	float:left;
+}
+.Products .cont .list2 dt,.Products .cont .list4 dt,.Products .cont .list6 dt{
+	background:url(dotted.gif) left top repeat-y;
+}
+.Products .cont dl dt div{
+	width:120px;
+	border:#DDD solid 1px;
+	padding:2px;
+	margin:15px auto 0 auto;
+}
+.Products .cont dl dt div a{
+	display:block;
+	height:90px;
+	overflow:hidden;
+}
+.Products .cont dl dd{
+	width:185px;
+	height:130px;
+	float:left;
+}
+.Products .cont dl dd .t{
+	height:30px;
+	line-height:30px;
+	overflow:hidden;
+	padding-top:10px;
+}
+.Products .cont dl dd .t a{
+	font-weight:bold;
+	font-size:14px;
+	color:#3074C1;
+}
+.Products .cont dl dd .c{
+	height:40px;
+	overflow:hidden;
+	line-height:20px;
+	color:#777;
+}
+.Products .cont dl dd .to{
+	padding:5px 0 0 10px;
+	background:url(to.gif) left 6px no-repeat;
+	line-height:25px;
+}
+.Products .cont dl dd .to a{
+	color:#3074C1;
+}
+.sidecont{
+	width:345px;
+	height:270px;
+	overflow:hidden;
+	background:url(scont.gif) center top no-repeat;
+}
+.sidecont .head{
+	height:35px;
+	overflow:hidden;
+	padding:0 10px 0 10px;
+	line-height:40px;
+}
+.sidecont .cont{
+	padding:10px;
+}
+.sidecont .cont dl{
+	height:95px;
+	overflow:hidden;
+	background:url(dotted.gif) left bottom repeat-x;
+	margin-bottom:8px;
+}
+.sidecont .cont dl dt{
+	width:110px;
+	height:95px;
+	float:left;
+}
+.sidecont .cont dl dt div{
+	width:90px;
+	border:#DDD solid 1px;
+	padding:2px;
+	margin:5px 0 0 5px;
+}
+.sidecont .cont dl dt div a{
+	display:block;
+	height:70px;
+	overflow:hidden;	
+}
+.sidecont .cont dl dd{
+	width:210px;
+	height:95px;
+	float:left;
+}
+.sidecont .cont dl dd .t{
+	height:20px;
+	padding-top:3px;
+	line-height:20px;
+	overflow:hidden;
+}
+.sidecont .cont dl dd .t a{
+	font-weight:bold;
+	color:#3074C1;
+}
+.sidecont .cont dl dd .c{
+	height:60px;
+	line-height:20px;
+	overflow:hidden;
+	color:#888;
+}
+.sidecont .cont .list{
+	height:22px;
+	line-height:22px;
+	padding:0 5px 0 15px;
+	overflow:hidden;
+	background:url(array1.gif) 5px 8px no-repeat;
+}
+.sidecont .cont .list a{
+	float:left;
+	color:#3074C1;
+}
+.sidecont .cont .list span{
+	float:right;
+	color:#888;
+}
+/*首页用户登录*/
+#Index_Login{
+	height:140px;
+	overflow:hidden;
+	background:url(rside.gif) center bottom no-repeat;
+	position:relative;
+}
+#Index_Login .head{
+	height:35px;
+	overflow:hidden;
+	padding-left:15px;
+	line-height:40px;
+	background:url(rside.gif) center top no-repeat;
+}
+#Index_Login .login,#Index_Login .info{
+	width:50px;
+	height:50px;
+	position:absolute;
+	background:url(icon5.gif) right top no-repeat;
+	right:2px;
+	top:2px;
+	z-index:1000;
+}
+#Index_Login .info{
+	background:url(icon6.gif) right top no-repeat;
+}
+#Index_Login .cont{
+	padding-top:8px;
+}
+#Index_Login .cont dl{
+	height:28px;
+	overflow:hidden;
+	line-height:30px;
+}
+#Index_Login .cont dl dt{
+	width:30%;
+	float:left;
+	text-align:right;
+	color:#666;
+}
+#Index_Login .cont dl dd{
+	width:65%;
+	float:left;
+}
+#Index_Login .cont dl dd .input{
+	width:170px;
+	height:15px;
+	vertical-align:middle;
+	border:#BDCADB solid 1px;
+	color:#666;
+}
+#Index_Login .cont dl dd .sub{
+	border:0;
+	vertical-align:middle;
+}
+#Index_Login .cont dl dd .send{
+	color:#F56D0F;
+	text-decoration:underline;
+	padding:2px 0 0 5px;
+}
+#Index_Login .cont dl dd .reg{
+	color:#3074C1;
+	text-decoration:underline;
+	padding:2px 0 0 0;
+}
+#Index_Login table {
+	height:105px;
+}
+#Index_Login table .img{
+	width:110px;
+	vertical-align:middle;
+}
+#Index_Login table .img div{
+	width:80px;
+	height:80px;
+	border:#DDD solid 1px;
+	padding:1px;
+	margin:auto;
+}
+#Index_Login table .word{
+	vertical-align:middle;
+	line-height:16px;
+	color:#3074C1;
+}
+#Index_Login table .word .t a{
+	color:#3074C1;
+	font-weight:bold;
+}
+#Index_Login table .word .m span{
+	color:red;
+}
+#Index_Login table .word .m em{
+	color:#f60;
+	font-style:normal;
+}
+#Index_Login table .word .m a{
+	color:#3074C1;
+}
+/*客服中心*/
+.Services{
+	margin-top:10px;
+	height:300px;
+	background:url(rside.gif) center top no-repeat;
+}
+.Services .head{
+	height:35px;
+	overflow:hidden;
+	line-height:40px;
+	font-size:14px;
+	font-weight:bold;
+	padding-left:15px;
+}
+.Services .cont{
+	padding:10px;
+}
+.Services .cont .ct1 dl{
+	height:45px;
+	border-bottom:#BDCADB dotted 1px;
+	padding-left:45px;
+	line-height:18px;
+	color:#3074C1;
+}
+.Services .cont .ct1 dl.tel{
+	background:url(tel.gif) 5px 7px no-repeat;
+}
+.Services .cont .ct1 dl.answer{
+	background:url(ans.gif) 5px 7px no-repeat;
+}
+.Services .cont .ct1 dl.send{
+	background:url(maill.gif) 5px 11px no-repeat;
+}
+.Services .cont .ct1 dl dt{
+	padding-top:5px;
+}
+.Services .cont .ct1 dl .h{
+	font-weight:bold;
+}
+.Services .cont .ct1 dl .telnum{
+	font-size:16px;
+	color:#F5771F;
+	font-weight:bold;
+}
+.Services .cont .ct2{
+	padding:5px;
+	line-height:20px;
+	color:#3074C1;
+}
+.Services .cont .ct2 .img{
+	height:30px;
+	line-height:30px;
+}
+.Services .cont .ct2 .img img{
+	vertical-align:middle;
+}
+/*成功案例*/
+.casecont{
+	margin-top:10px;
+	height:170px;
+	background:url(rside.gif) center bottom no-repeat;
+}
+.casecont .head{
+	height:35px;
+	overflow:hidden;
+	line-height:40px;
+	font-size:14px;
+	font-weight:bold;
+	padding-left:15px;
+	background:url(rside.gif) center top no-repeat;
+}
+.casecont .cont{
+	padding-top:18px;
+}
+.casecont .cont div{
+	padding-bottom:10px;
+	text-align:center;
+	word-spacing:8px
+}
+/*
+*第三栏
+*/
+.Maincont3{
+	height:90px;
+	overflow:hidden;
+}
+.friendlink{
+	height:90px;
+	overflow:hidden;
+}
+.friendlink .head{
+	height:35px;
+	background:url(head1.gif) left top repeat-x;
+	overflow:hidden;
+	line-height:40px;
+}
+.friendlink .head .tag{
+	padding-left:15px;
+	background:url(rside.gif) left top no-repeat;
+}
+.friendlink .head .more{
+	padding-right:10px;
+	background:url(rside.gif) right top no-repeat;
+}
+.friendlink .cont{
+	border:#D6E1F5 solid 1px;
+	border-top:0;
+	height:54px;
+}
+.friendlink .cont .pic{
+	padding:10px 10px 0 10px;
+	height:31px;
+	overflow:hidden;
+}

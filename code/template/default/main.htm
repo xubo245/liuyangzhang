@@ -1,0 +1,88 @@
+<!--
+<?php
+print <<<EOT
+-->
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/enterprise/index.css">
+<div class="MainContainer Maincont1">
+	<div class="main">
+    	<div class="slidecont">{$label[enterprise_indexslide]}</div>
+    </div>
+    <div class="side">
+    	<div class="newscont">
+        	<div class="head">{$label[enterprise_indexh1]}</div>
+            <div class="cont">{$label[enterprise_indext1]}</div>
+        </div>
+    </div>
+</div>
+<div class="MainContainer Maincont2">
+	<div class="main">
+    	<div class="Products">
+        	<div class="head">{$label[enterprise_indexh2]}</div>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td class="cont">{$label[enterprise_indext2]}</td>
+              </tr>
+            </table>
+        </div>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="mt10">
+          <tr>
+            <td>
+            	<div class="sidecont fl">
+                	<div class="head">{$label[enterprise_indexh3]}</div>
+                    <div class="cont">{$label[enterprise_indext3]}</div>
+                </div>
+                <div class="sidecont fr">
+                	<div class="head">{$label[enterprise_indexh4]}</div>
+                    <div class="cont">{$label[enterprise_indext4]}</div>
+                </div>
+            </td>
+          </tr>
+        </table>
+    </div>
+    <div class="side">
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+document.write('<div id="Index_Login">$Load_Msg</div>');
+document.write('<div style="display:none;"><iframe src="$webdb[www_url]/do/hack.php?hack=login&styletype=ent&iframeID=Index_Login" width=0 height=0></iframe></div>');
+//-->
+</SCRIPT>
+		<div class="siderad mt10">{$label[enterprise_indexad1]}</div>
+        <div class="Services">
+        	<div class="head">{$label[enterprise_indexh5]}</div>
+            <div class="cont">{$label[enterprise_indext5]}</div>
+        </div>
+        <div class="casecont">
+        	<div class="head">{$label[enterprise_indexh6]}</div>
+            <div class="cont">{$label[enterprise_indext6]}</div>
+        </div>
+    </div>
+</div>
+<div class="MainContainer Maincont3">
+	<div class="main">
+    	<div class="friendlink">
+        	<div class="head">{$label[enterprise_indexh7]}</div>
+            <div class="cont">
+            	<div class="pic">
+<!--
+EOT;
+foreach($friendlinkDB[1] AS $key=>$rs){
+print <<<EOT
+-->
+              		<a href="$rs[url]" target="_blank"><img alt="Ãû³Æ:$rs[name]\r\nÃèÊö:$rs[descrip]" src="$rs[logo]" width="88" height="31"/></a> 
+<!--
+EOT;
+}
+print <<<EOT
+-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="side">
+    	<div class="siderad">{$label[enterprise_indexad2]}</div>
+    </div>
+</div>
+<!--
+EOT;
+?>
+-->

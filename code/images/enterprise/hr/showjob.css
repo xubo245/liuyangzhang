@@ -1,0 +1,138 @@
+/*页面地图*/
+.nav_guide{
+	margin-top:5px;
+	height:29px;
+	overflow:hidden;
+	line-height:33px;
+	padding-left:25px;
+	color:#777;
+	background:url(guide.gif) center top no-repeat;
+}
+.nav_guide a:link,.nav_guide a:visited,.nav_guide a:hover{
+	color:#777;
+}
+/*页面定位*/
+.MainContainer{
+	margin-top:10px;
+}
+.MainContainer .side{
+	width:220px;
+	float:left;
+}
+.MainContainer .main{
+	width:756px;
+	float:right;
+}
+/*
+*栏目样式
+*/
+.sortcont{
+	padding-bottom:10px;
+	background:url(sortbg.gif) left bottom no-repeat;
+}
+.sortcont .head{
+	height:45px;
+	line-height:40px;
+	background:url(sortbg.gif) left top no-repeat;
+	padding-left:15px;
+	font-size:14px;
+	font-weight:bold;
+	color:#FFF;
+}
+.sortcont .cont dl{
+	background:url(sortbg.gif) left -40px no-repeat;
+	padding-bottom:5px;
+}
+.sortcont .cont dl dt{
+	height:25px;
+	background:url(bigsort.gif) center top no-repeat;
+	overflow:hidden;
+	line-height:25px;
+	padding-left:40px;
+	padding-right:20px;
+	font-weight:bold;
+}
+.sortcont .cont dl dd{
+	padding-left:40px;
+	padding-top:8px;
+	padding-right:20px;
+	line-height:20px;
+}
+.sortcont .cont dl dd a{
+	color:#888;
+}  
+
+.leftadcont{
+	margin-top:10px;
+	width:220px;
+	overflow:hidden;
+}
+.hotlinecont{
+	margin-top:10px;
+	background:url(telbg.gif) left top no-repeat;
+	padding:15px 0 0 75px;
+	line-height:20px;
+	color:#FFF;
+}
+.hotlinecont .tel{
+	font-size:18px;
+	font-weight:bold;
+}
+.hotlinecont .l{
+	padding-top:8px;
+}
+.hotlinecont .l a{
+	color:#00499B;
+	text-decoration:underline;
+}
+/*
+*内容样式
+*/
+.listtitle .head{
+	height:55px;
+	overflow:hidden;
+	line-height:65px;
+	background:url(head1.gif) left top no-repeat;
+	padding-left:35px;
+	color:#378DE4;
+	font-size:20px;
+	font-weight:bold;
+}
+.listtitle .cont{
+	border:#D6E1F5 solid 1px;
+	border-top:0;
+	padding:5px 20px 20px 20px;
+}
+.listtitle .cont .showjob,.listtitle .cont .showjob td{
+	border:#DDD solid 1px;
+	border-collapse:collapse;
+}
+.listtitle .cont .showjob .v1 table,.listtitle .cont .showjob .v1 td{
+	border:0;
+}
+.listtitle .cont .showjob td{
+	vertical-align:middle;
+}
+.listtitle .cont .showjob .t{
+	width:18%;
+	height:30px;
+	text-align:right;
+	padding-right:5px;
+	font-weight:bold;
+}
+.listtitle .cont .showjob .v{
+	width:32%;
+	padding-left:5px;
+}
+.listtitle .cont .showjob .v1{
+	width:82%;
+	padding:5px;
+	line-height:20px;
+}
+.listtitle .cont .showjob .v1 div span{
+	font-weight:bold;
+}
+.listtitle .cont .submit{
+	padding-top:20px;
+	text-align:center;
+}

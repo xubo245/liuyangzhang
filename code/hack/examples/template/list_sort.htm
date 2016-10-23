@@ -1,0 +1,42 @@
+<!--
+<?php
+print <<<EOT
+-->  
+<table width='100%' cellspacing='1' cellpadding='3' bgcolor='#CCCCCC' class="tablewidth">
+  <form name="form1" method="post" action="index.php?lfj=$lfj&action=$job">
+    <tr class="head"> 
+      <td width="7%" align="center">FID </td>
+      <td align="center" width="53%">名称 </td>
+      <td align="center" width="14%">管理链接</td>
+      <td align="center" width="11%">修改</td>
+      <td width="15%" align="center">删除</td>
+    </tr>
+    <!--
+EOT;
+foreach($listdb AS $key=>$rs){
+print <<<EOT
+-->
+    <tr bgcolor='#FFFFFF'> 
+      <td width='7%' align="center">$rs[fid]</td>
+      <td width="53%"> 
+        <input type="checkbox" name="iddb[{$rs[id]}]" value="$rs[id]">
+        <a href="../do/examples.php?fid=$rs[fid]" target="_blank">$rs[name]</a> 
+      </td>
+      <td width="14%" align="center"><a href="index.php?lfj=examples&job=list&fid=$rs[fid]"><img alt='' src='../member/images/art_icon.gif' border=0></a></td>
+      <td width="11%" align="center"><a href="index.php?lfj=examples&job=modsort&fid=$rs[fid]"><img alt='点击修改' src='../member/images/button_edit.png' border=0></a></td>
+      <td width="15%" align="center"><a href="index.php?lfj=examples&action=deletesort&fid=$rs[fid]" onClick="return confirm('删除后不可恢复,你确实要删除吗?')"><img alt='点击删除' src='../member/images/del_icon2.gif' border=0></a></td>
+    </tr>
+    <!--
+EOT;
+}print <<<EOT
+-->
+  </form>
+</table>
+<!--
+EOT;
+?>
+-->
+
+
+
+

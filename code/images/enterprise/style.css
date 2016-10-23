@@ -1,0 +1,303 @@
+/*
+*样式初始化
+*/
+body, form, ul, li, dl, dd, dt ,td,th{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-size:12px;
+}
+li,ul{
+	list-style: none;
+} 
+TD {
+	color: #333333;
+	VERTICAL-ALIGN: top;
+} 
+input,textarea{
+	border:1px solid #ccc;
+}
+img{
+	border:0;
+}
+a {
+	color:#333;
+}
+a:link {
+	color:#333333;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #333333;
+}
+a:hover {
+	text-decoration: underline;
+	color: #4E667B;
+}
+a:active {
+	text-decoration: none;
+}
+.wrap{
+	width:990px;
+	margin:auto;
+	padding-top:5px;
+}
+.mt10{
+	margin-top:10px;
+}
+.mb10{
+	margin-bottom:10px;
+}
+.cleardiv{
+	clear:both;
+	padding:0;
+	margin:0;
+	height:0;
+}
+.head{
+	height:30px;
+	overflow:hidden;
+}
+.tag{
+	float:left;
+	font-size:14px;
+	font-weight:bold;
+}
+.more{
+	float:right;	
+}
+.fl{
+	float:left;
+}
+.fr{
+	float:right;	
+}
+/*******************************************网站头部************************************/
+/*
+*顶部信息
+*/
+.Top_Login{
+	width:990px;
+	height:28px;
+	background:url(toplgoin.gif) center top no-repeat;
+	overflow:hidden;
+	margin:auto;
+}
+.Top_Login .login{
+	float:left;
+	height:28px;
+	line-height:30px;
+	padding-left:10px;
+}
+.Top_Login .login span{
+	display:block;
+	float:left;
+}
+.Top_Login .login span.input,.Top_Login .login span.sub{
+	padding:3px 10px 0 0;
+}
+.Top_Login .login span.input input{
+	width:100px;
+	height:15px;
+}
+.Top_Login .login span.sub input{
+	border:0;
+}
+.Top_Login .login em{
+	font-style:normal;
+	color:red;
+	padding-right:10px;
+}
+.Top_Login .info{
+	float:right;
+	padding-right:10px;
+	line-height:30px;
+}
+.Top_Login .info span{
+	color:red;
+}
+/*
+*logo部分样式
+*/
+.LogoContainer{
+	width:990px;
+	height:80px;
+	margin:auto;
+	overflow:hidden;
+	background:url(logobg.gif) center top no-repeat;
+}
+.LogoContainer .logo{
+	float:left;
+	padding-top:5px;
+}
+.LogoContainer .info{
+	width:500px;
+	float:right;
+	color:#666;
+}
+.LogoContainer .info .hotline{
+	height:35px;
+	padding-top:15px;
+}
+.LogoContainer .info .hotline iframe{
+	float:right;
+}
+.LogoContainer .info .hotline span{
+	color:#F56D0F;
+	font-size:18px;
+}
+.LogoContainer .info .atc{
+	height:20px;
+	line-height:20px;
+	text-align:right;
+	word-spacing:10px;
+}
+.LogoContainer .info .atc a{
+	padding-left:20px;
+	padding-top:2px;
+	color:#666;	
+}
+.LogoContainer .info .atc a:hover{
+	text-decoration:none;
+}
+.LogoContainer .info .atc a.home{
+	background:url(icon1.gif) left top no-repeat;
+}
+.LogoContainer .info .atc a.fav{
+	background:url(icon2.gif) left top no-repeat;
+}
+.LogoContainer .info .atc a.help{
+	background:url(icon3.gif) left top no-repeat;
+}
+.LogoContainer .info .atc a.set{
+	background:url(icon4.gif) left top no-repeat;
+}
+
+
+/*
+*导航样式
+*/
+#Mainmenu{
+	margin:auto;
+	width:980px;
+	height:40px;
+	line-height:45px;
+	padding-left:10px;
+	overflow:hidden;
+	background:url(menubg.gif) center top no-repeat;
+}
+#Mainmenu li{
+	float:left;
+	height:40px;
+	padding:0 5px 0 7px;
+	background:url(menuspc.gif) left 1px no-repeat;
+}
+#Mainmenu li.begin{
+	background:none;
+}
+#Mainmenu li a{
+	display:block;
+	width:80px;
+	text-align:center;
+	font-size:14px;
+	font-weight:bold;
+	color:#FFF;
+}
+#Mainmenu li a.ck{
+	background:url(menuck.gif) center 8px no-repeat;
+	color:#555;
+}
+#Mainmenu li a:hover{
+	text-decoration:none;
+	background:url(menuck1.gif) center 8px no-repeat;
+	color:#999;
+}
+/*
+*当前位置
+*/
+#nav_guide{
+	width:990px;
+	height:25px;
+	overflow:hidden;
+	margin:10px auto;
+	border:#D6E1F5 solid 1px;
+	line-height:26px;
+	color:#666;
+}
+#nav_guide a{
+	color:#666;
+}
+#nav_guide .t1,#nav_guide .t2{
+	float:left;
+}
+#nav_guide .t1{
+	padding-left:40px;
+	padding-right:5px;
+	border-right:#D6E1F5 solid 1px;
+	background:url(home_icon.gif) 20px 7px no-repeat;
+}
+#nav_guide .t2{
+	padding-left:10px;
+}
+/*
+*底部样式
+*/
+.FootContainer{
+	width:990px;
+	height:80px;
+	margin:10px auto;
+	overflow:hidden;
+	border-top:#BDCADB solid 1px;
+	background:#F9FBFF;
+}
+.FootContainer .flogo{
+	float:left;
+	padding:7px 20px 0 0;
+}
+.FootContainer .copyright{
+	float:left;
+	padding-top:15px;
+	line-height:20px;
+	color:#8E708E;
+}
+.FootContainer .copyright a{
+	color:#4C9BC7;
+}
+.FootContainer .copyright span{
+	color:#FFB64C;
+}
+/*********************************************************************
+**********************************************************************
+AJAX在线编辑DIV容器
+这个会员看不到.只是版主管理员才可以看到.这是后台风格
+一般不必修改了.修改了会员也看不到
+**********************************************************************
+*********************************************************************/
+#AjaxEditTable{
+	border:1px solid #BEDDFF;
+	background:#FFF;
+}
+#AjaxEditTable .head{
+	height: 21px;
+	background: #DBEAFF;
+	border-bottom:1px solid #BEDDFF;
+	padding:3px 5px 0 7px;
+}
+#AjaxEditTable .head a{
+	color:#FFF;
+}
+#AjaxEditTable .head span{
+	DISPLAY: block; 
+	FLOAT: right;
+}
+#AjaxEditTable .middle{
+	background:#FFF;
+	line-height:18px;
+	padding:5px;
+}
+#AjaxEditTable .middle input,#AjaxEditTable .middle textarea{
+	border:1px solid #BEDDFF;
+	background:#FFF;
+}

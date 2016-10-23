@@ -1,0 +1,232 @@
+/*大广告*/
+.mainbanner{
+	clear:both;
+}
+/*页面地图*/
+.nav_guide{
+	margin-top:5px;
+	height:29px;
+	overflow:hidden;
+	line-height:33px;
+	padding-left:25px;
+	color:#777;
+	background:url(guide.gif) center top no-repeat;
+}
+.nav_guide a:link,.nav_guide a:visited,.nav_guide a:hover{
+	color:#777;
+}
+/*页面定位*/
+.MainContainer{
+	margin-top:10px;
+}
+.MainContainer .side{
+	width:220px;
+	float:left;
+}
+.MainContainer .main{
+	width:756px;
+	float:right;
+}
+/*首页用户登录*/
+#Index_Login{
+	height:140px;
+	overflow:hidden;
+	background:url(side.gif) center bottom no-repeat;
+	position:relative;
+}
+#Index_Login .head{
+	height:35px;
+	overflow:hidden;
+	padding-left:15px;
+	line-height:40px;
+	background:url(side.gif) center top no-repeat;
+}
+#Index_Login .login,#Index_Login .info{
+	width:50px;
+	height:50px;
+	position:absolute;
+	background:url(icon5.gif) right top no-repeat;
+	right:2px;
+	top:2px;
+	z-index:1000;
+}
+#Index_Login .info{
+	background:url(icon6.gif) right top no-repeat;
+}
+#Index_Login .cont{
+	padding-top:8px;
+}
+#Index_Login .cont dl{
+	height:28px;
+	overflow:hidden;
+	line-height:30px;
+}
+#Index_Login .cont dl dt{
+	width:30%;
+	float:left;
+	text-align:right;
+	color:#666;
+}
+#Index_Login .cont dl dd{
+	width:65%;
+	float:left;
+}
+#Index_Login .cont dl dd .input{
+	width:120px;
+	height:15px;
+	vertical-align:middle;
+	border:#BDCADB solid 1px;
+	color:#666;
+}
+#Index_Login .cont dl dd .sub{
+	border:0;
+	vertical-align:middle;
+}
+#Index_Login .cont dl dd .reg{
+	color:#3074C1;
+	text-decoration:underline;
+	padding:2px 0 0 0;
+}
+#Index_Login table {
+	height:105px;
+}
+#Index_Login table .img{
+	width:100px;
+	padding-top:8px;
+}
+#Index_Login table .img div{
+	width:80px;
+	height:80px;
+	border:#DDD solid 1px;
+	padding:1px;
+	margin:0 auto 0 10px;
+}
+#Index_Login table .word{
+	padding:7px 0 0 3px;
+	line-height:16px;
+	color:#3074C1;
+}
+#Index_Login table .word .t a{
+	color:#3074C1;
+	font-weight:bold;
+}
+#Index_Login table .word .m span{
+	color:red;
+}
+#Index_Login table .word .m em{
+	color:#f60;
+	font-style:normal;
+}
+#Index_Login table .word .m a{
+	color:#3074C1;
+}
+/*客服中心*/
+.Services{
+	margin-top:10px;
+	height:300px;
+	overflow:hidden;
+	background:url(side.gif) center top no-repeat;
+}
+.Services .head{
+	height:35px;
+	overflow:hidden;
+	line-height:40px;
+	font-size:14px;
+	font-weight:bold;
+	padding-left:15px;
+}
+.Services .cont{
+	padding:10px;
+}
+.Services .cont .ct1 dl{
+	height:45px;
+	border-bottom:#BDCADB dotted 1px;
+	padding-left:45px;
+	line-height:18px;
+	color:#3074C1;
+}
+.Services .cont .ct1 dl.tel{
+	background:url(tel.gif) 5px 7px no-repeat;
+}
+.Services .cont .ct1 dl.answer{
+	background:url(ans.gif) 5px 7px no-repeat;
+}
+.Services .cont .ct1 dl.send{
+	background:url(maill.gif) 5px 11px no-repeat;
+}
+.Services .cont .ct1 dl dt{
+	padding-top:5px;
+}
+.Services .cont .ct1 dl .h{
+	font-weight:bold;
+}
+.Services .cont .ct1 dl .telnum{
+	font-size:16px;
+	color:#F5771F;
+	font-weight:bold;
+}
+.Services .cont .ct2{
+	padding:5px;
+	line-height:20px;
+	color:#3074C1;
+}
+.Services .cont .ct2 .img{
+	height:30px;
+	line-height:30px;
+}
+.Services .cont .ct2 .img a{
+	color:#f60;
+}
+.Services .cont .ct2 .img img{
+	margin-right:3px;
+}
+/*合作伙伴*/
+.casecont{
+	margin-top:10px;
+	height:170px;
+	background:url(side.gif) center bottom no-repeat;
+}
+.casecont .head{
+	height:35px;
+	overflow:hidden;
+	line-height:40px;
+	font-size:14px;
+	font-weight:bold;
+	padding-left:15px;
+	background:url(side.gif) center top no-repeat;
+}
+.casecont .cont{
+	padding-top:18px;
+}
+.casecont .cont div{
+	padding-bottom:10px;
+	text-align:center;
+}
+/*
+*内容样式
+*/
+.listtitle .head{
+	height:55px;
+	overflow:hidden;
+	line-height:65px;
+	background:url(head1.gif) left top no-repeat;
+	padding-left:35px;
+	color:#378DE4;
+	font-size:20px;
+	font-weight:bold;
+}
+.listtitle .cont{
+	border:#D6E1F5 solid 1px;
+	border-top:0;
+	padding:5px 30px 25px 35px;
+}
+.listtitle .cont h3{
+	font-size:14px;
+	color:#388EE5;
+}
+.listtitle .cont p{
+	font-size:14px;
+	color:#686868;
+	line-height:25px;
+	text-indent:25px;
+}

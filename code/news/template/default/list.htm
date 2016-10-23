@@ -1,0 +1,82 @@
+<!--
+<?php
+print <<<EOT
+--> 
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/enterprise/news/list.css">
+<div class="mainbanner">{$label[enterprise_newsbanner]}</div>
+<div class="nav_guide">
+   <a href="$webdb[www_url]">首页</a> $GuideFid[$fid]
+</div>
+<div class="MainContainer">
+	<div class="side">
+    	<div class="sortcont">
+        	<div class="head">{$label[enterprise_newsh1]}</div>
+            <div class="cont">
+<!--
+EOT;
+foreach($Fid_db[0] AS $key=>$value){
+print <<<EOT
+-->
+            	<dl>
+                	<dt><a href="list.php?fid=$key">$value</a></dt>
+                	
+<!--
+EOT;
+foreach($Fid_db[$key] AS $keys=>$rs){
+print <<<EOT
+-->
+					<dd><a href="list.php?fid=$keys">$rs</a></dd>	
+<!--
+EOT;
+}print <<<EOT
+-->                    
+                </dl>
+<!--
+EOT;
+}print <<<EOT
+-->
+            </div>            
+        </div>
+        <div class="thenewest">
+            <div class="head">{$label[enterprise_newsh2]}</div>
+            <div class="cont">{$label[enterprise_newst2]}</div>
+        </div>
+    </div>
+    <div class="main">
+    	<div class="listtitle">
+        	<div class="head">$fidDB[name]</div>
+            <div class="cont">
+            	<dl class="h">
+                	<dt>分类/标题</dt>
+                    <dd>发布</dd>
+                </dl>
+<!--
+EOT;
+foreach($listdb AS $key=>$rs){
+$target=$rs[target]?'_blank':'_self';
+print <<<EOT
+-->
+				<dl class="list">
+                	<dt><a href="list.php?fid=$rs[fid]" class="f">[{$rs[fname]}]</a><a href="bencandy.php?fid=$rs[fid]&id=$rs[id]" target=$target>$rs[title]</a></dt>
+                    <dd>({$rs[posttime]})</dd>
+                </dl>
+<!--
+EOT;
+}if($showpage){
+print <<<EOT
+-->
+				<div class="page"><div>$showpage</div></div>	
+<!--
+EOT;
+}
+print <<<EOT
+-->				
+            </div>
+        </div>
+    </div>
+    <div class="cleardiv"></div>
+</div>
+<!--
+EOT;
+?>
+-->

@@ -1,0 +1,80 @@
+<!--
+<?php
+$rsdb[iframeurl]?$isiframe[1]=" checked ":$isiframe[0]=" checked ";
+if(!$nextdb[id]){$nextdb[links]=" onclick='return false;' ";$nextdb[subject]="没有了";}
+if(!$backdb[id]){$backdb[links]=" onclick='return false;' ";$backdb[subject]="没有了";}
+print <<<EOT
+-->
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/enterprise/news/bencandy.css">
+<div class="mainbanner">{$label[enterprise_newsbanner]}</div>
+<div class="nav_guide">
+   <a href="$webdb[www_url]">首页</a> $GuideFid[$fid]
+</div>
+<div class="MainContainer">
+	<div class="side">
+    	<div class="sortcont">
+        	<div class="head">{$label[enterprise_newsh1]}</div>
+            <div class="cont">
+<!--
+EOT;
+foreach($Fid_db[0] AS $key=>$value){
+print <<<EOT
+-->
+            	<dl>
+                	<dt><a href="list.php?fid=$key">$value</a></dt>
+                	
+<!--
+EOT;
+foreach($Fid_db[$key] AS $keys=>$rs){
+print <<<EOT
+-->
+					<dd><a href="list.php?fid=$keys">$rs</a></dd>	
+<!--
+EOT;
+}print <<<EOT
+-->                    
+                </dl>
+<!--
+EOT;
+}print <<<EOT
+-->
+            </div>            
+        </div>
+        <div class="thenewest">
+            <div class="head">{$label[enterprise_newsh2]}</div>
+            <div class="cont">{$label[enterprise_newst2]}</div>
+        </div>
+    </div>
+    <div class="main">
+    	<div class="listtitle">
+        	<div class="head">$fidDB[name]</div>
+            <div class="cont">
+            	<div class="title">$rsdb[title]</div>
+                <div class="info">[ 发布日期:{$rsdb[posttime]} 
+                  | 浏览:<font id="hits">{$rsdb[hits]}</font>次 ]
+                </div>
+                <table class="content" width="99%" cellspacing="0" cellpadding="0" style='TABLE-LAYOUT: fixed;WORD-WRAP: break-word'>
+                  <tr> 
+                    <td align="left" class="content_word"><font id="zoom" face="宋体"><span id="post1">$rsdb[content]</span></font></td>
+                  </tr>
+                </table>	
+				<div class="updown">
+                	<div><a href="bencandy.php?fid=$backdb[fid]&id=$backdb[id]" $backdb[links] class="b">上一篇</a><a $backdb[links] href="bencandy.php?fid=$backdb[fid]&id=$backdb[id]" title="$backdb[title]">$backdb[subject]</a></div>
+                    <div><a href="bencandy.php?fid=$nextdb[fid]&id=$nextdb[id]" $nextdb[links] class="b">下一篇</a><a $nextdb[links] href="bencandy.php?fid=$nextdb[fid]&id=$nextdb[id]" title="$nextdb[title]">$nextdb[subject]</a></div>
+                </div>
+                <div class="moreaction">
+<SCRIPT LANGUAGE="JavaScript" src="$webdb[www_url]/images/default/bencandy.js"></SCRIPT><input type=hidden value=1 name="h1" id="h1">
+					【<a href="javascript:doZoom(18)">大</a> <a href="javascript:doZoom(14)">中</a> <a href="javascript:doZoom(12)">小</a>】
+                    【<a href="javascript:doPrint()">打印</a>】【<a href="javascript:ft(1)" id="Maiweb1">繁体</a>】 
+                    【<a href="javascript:window.close()">关闭</a>】 
+                    【<a href="javascript:window.close()"></a><a href="#">返回顶部</a>】
+                </div>		
+            </div>
+        </div>
+    </div>
+    <div class="cleardiv"></div>
+</div>
+<!--
+EOT;
+?>
+-->

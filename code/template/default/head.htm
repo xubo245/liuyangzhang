@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!--<?php
+$bodyondblclick = (function_exists('label_array')&&$web_admin&&!$MakeIndex) ?"dblclick_label();":"";
+print <<<EOT
+-->
+<head>
+<title>$titleDB[title]</title>
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/enterprise/style.css">
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/enterprise/cms.css">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="keywords" content="$titleDB[keywords]">
+<meta name="description" content="$titleDB[description]">
+</head>
+<SCRIPT LANGUAGE="JavaScript">
+//屏蔽可忽略的js脚本错误
+function killErr(){
+	return true;
+}
+window.onerror=killErr;
+</SCRIPT>
+<!--
+EOT;
+if($webdb[cookieDomain]){print <<<EOT
+-->
+<SCRIPT LANGUAGE="JavaScript">
+//解决不同域名的框架跨域问题
+document.domain = "$webdb[cookieDomain]";
+</SCRIPT>
+<!--
+EOT;
+}print <<<EOT
+-->
+<SCRIPT LANGUAGE="JavaScript" src="$webdb[www_url]/images/default/inc.js"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript" src="$webdb[www_url]/images/default/default.js"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript" src="$webdb[www_url]/images/default/swfobject.js"></SCRIPT>
+<SCRIPT LANGUAGE="JavaScript" src="$webdb[www_url]/images/default/jquery-1.2.6.min.js"></SCRIPT>
+<body ondblclick="$bodyondblclick">
+<div class="Top_Login">
+	<div class="login">
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+document.write('<span id="Top_Login">$Load_Msg</span>');
+document.write('<div style="display:none;"><iframe src="$webdb[www_url]/do/hack.php?hack=login&styletype=enterprise&iframeID=Top_Login" width=0 height=0></iframe></div>');
+//-->
+</SCRIPT> 
+    </div>
+    <div class="info">
+<script language="JavaScript"> 
+<!---
+today=new Date();
+var hours = today.getHours();
+var minutes = today.getMinutes();
+var seconds = today.getSeconds();
+var timeValue = ((hours >12) ? hours -12 :hours); 
+timeValue += ((minutes < 10) ? ":0" : ":") + minutes;
+timeValue += (hours >= 12) ? " 下午 " : " 上午 ";
+function initArray(){
+this.length=initArray.arguments.length
+for(var i=0;i<this.length;i++)
+this[i+1]=initArray.arguments[i]  }
+var d=new initArray("<span>星期日</span>","星期一","星期二","星期三","星期四","星期五","星期六"); 
+document.write(today.getFullYear(),"年",today.getMonth()+1,"月",today.getDate(),"日 ",d[today.getDay()+1]," ",timeValue); 
+//-->
+</script>
+    </div>
+</div>
+<div class="LogoContainer">
+	<div class="logo"><a href="$webdb[www_url]"><img src="$webdb[www_url]/images/enterprise/logo.gif"/></a></div>
+    <div class="info">
+    	<div class="hotline">{$label[enterprise_hotline]}</div>
+        <div class="atc">
+        	{$label[enterprise_headatc]}
+        </div>
+    </div>
+</div>
+<ul id="Mainmenu">
+<!--
+EOT;
+$detail=explode("\r\n",$webdb[guide_word]);
+foreach($detail AS $key=>$value){
+if(!$value)continue;
+list($Hname,$Hurl,$Hblank,$Hcolor,$Hlid,$Ckname)=explode("|",$value);
+$Hblank=$Hblank?"  target=\"_blank\"":'';
+$class=($key==0)?"class=\"begin\"":'';
+$Hcolor=$Hcolor?" style=\"color:$Hcolor;\"":'';
+$checkword = $check[$Ckname] ? " class=\"ck\"" : "";
+print <<<EOT
+-->
+	<li $class><a href="$Hurl"{$Hblank}{$Hcolor}{$checkword } onmousemove="changmenu(this)">{$Hname}</a></li>
+<!--
+EOT;
+}print <<<EOT
+-->
+</ul>
+<script language="javascript">
+function changmenu(obj){
+	var alinks=document.getElementById('Mainmenu').getElementsByTagName('a');
+	for(var i=0;i<alinks.length;i++){
+		alinks[i].className='';
+	}								
+	obj.className='ck';
+}
+</script>
+<SCRIPT LANGUAGE="JavaScript">
+<!--//目的是为了做风格方便
+document.write('<div class="wrap">');
+//-->
+</SCRIPT>
+<!--
+EOT;
+?>
+-->

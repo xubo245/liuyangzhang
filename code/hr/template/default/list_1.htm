@@ -1,0 +1,99 @@
+<!--
+<?php
+print <<<EOT
+--> 
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/enterprise/hr/listjob.css">
+<div class="mainbanner">{$label[enterprise_hrlist1]}</div>
+<div class="nav_guide">
+   <a href="$webdb[www_url]">首页</a>  $GuideFid[$fid]
+</div>
+<div class="MainContainer">
+	<div class="side">
+    	<div class="sortcont">
+        	<div class="head">职位分类</div>
+            <div class="cont">
+<!--
+EOT;
+foreach($Fid_db[0] AS $fkey=>$fvalue){
+$color=$fid==$fkey?" style=\"color:red;\"":'';
+print <<<EOT
+-->
+				<dl>
+            		<dt><a href="list.php?fid=$fkey&cityid=$cityid"{$color}>{$fvalue}</a> </dt>
+					<dd>
+<!--
+EOT;
+foreach($Fid_db[$fkey] AS $key=>$value){
+$color=$fid==$key?" style=\"color:red;\"":'';
+print <<<EOT
+-->
+						<a href="list.php?fid=$key&cityid=$cityid"{$color}>{$value}</a>  
+<!--
+EOT;
+}print <<<EOT
+-->
+					</dd>
+            	</dl>
+<!--
+EOT;
+}print <<<EOT
+-->
+            </div>
+        </div>
+        <div class="leftadcont">{$label[enterprise_hrlist2]}</div>
+        <div class="hotlinecont">
+        	{$label[enterprise_hrlist3]}
+        </div>
+    </div>
+    <div class="main">
+    	<div class="listtitle">
+        	<div class="head">职位列表</div>
+            <div class="cont">
+            	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="listjob">
+                  <tr class="h">
+                    <td class="td1">职位名称</td>
+                    <td class="td2">招聘人数</td>
+                    <td class="td3">工作地点</td>
+                    <td class="td4">职位性质</td>
+                    <td class="td5">发布日期</td>
+                    <td class="td6">截止日期</td>
+                  </tr>
+<!--
+EOT;
+foreach($listdb AS $key=>$rs){
+$class=($key%2==1)?'c1':'c2';
+$rs[nature] = $rs[nature] ? $rs[nature] : "暂无";
+$rs[time_over] = $rs[time_over] ? $rs[time_over] : "暂无";
+print <<<EOT
+-->
+                  <tr class="c $class">
+                    <td class="td1"><a href="$rs[url]" target="$target" title='$rs[full_title]'>$rs[title]</a></td>
+                    <td class="td2">$rs[nums]</td>
+                    <td class="td3">$rs[workplace]</td>
+                    <td class="td4">{$rs[nature]}</td>
+                    <td class="td5">{$rs[posttime]}</td>
+                    <td class="td6">{$rs[time_over]}</td>
+                  </tr>
+<!--
+EOT;
+}print <<<EOT
+-->
+                </table>
+<!--
+EOT;
+if($showpage){print <<<EOT
+-->
+				<div class="page"><div>$showpage</div></div>
+<!--
+EOT;
+}print <<<EOT
+-->
+            </div>
+        </div>
+    </div>
+    <div class="cleardiv"></div>
+</div>
+<!--
+EOT;
+?>
+-->

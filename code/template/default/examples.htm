@@ -1,0 +1,83 @@
+<!--
+<?php
+print <<<EOT
+-->
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/enterprise/form/form.css">
+<div class="mainbanner">{$label[enterprise_examples]}</div>
+<div class="nav_guide">
+   <a href="$webdb[www_url]">首页</a> -> 成功案例
+</div>
+<div class="MainContainer">
+	<div class="side">
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+document.write('<div id="Index_Login">$Load_Msg</div>');
+document.write('<div style="display:none;"><iframe src="$webdb[www_url]/do/hack.php?hack=login&styletype=introduce&iframeID=Index_Login" width=0 height=0></iframe></div>');
+//-->
+</SCRIPT>
+		<div class="Services">
+        	<div class="head">{$label[enterprise_form2]}</div>
+            <div class="cont">{$label[enterprise_form3]}</div>
+        </div>
+    </div>
+    <div class="main">
+    	<div class="listtitle">
+        	<div class="head">成功案例</div>
+            <div class="cont">
+<script>
+function upfile(url,name,size,ty){
+	document.getElementById(ty).value=url;
+}
+</script>
+<!--
+EOT;
+foreach($fid_db AS $key=>$arr){
+print <<<EOT
+-->
+				<div class="about"><table width="99%" border="0" cellspacing="1" cellpadding="3" bgcolor="#F0F0F0"><tr><td>　 $arr[name] </td></tr></table></div>
+                <table width="99%" border="0" cellspacing="1" cellpadding="3" bgcolor="#F0F0F0">
+<!--
+EOT;
+$listdb = get_examples($arr[fid]);
+foreach($listdb AS $key1=>$array){
+print <<<EOT
+-->
+			  <tr bgcolor="#FFFFFF">
+ <!--
+EOT;
+foreach($array AS $key=>$rs){
+print <<<EOT
+-->
+                <td width="20%" align="center" style="padding:5px;">
+<div style="display:$rs[display]"><a href="$rs[url]" title="$rs[descrip]" target="_blank">
+				<img onerror="this.style.display='none'" style="margin-bottom:5px;" src="$rs[logo]" width="88" height="31" border="0"></a><br>
+                   
+					<a href="$rs[url]" title="$rs[descrip]" target="_blank"><b>$rs[name]</b></a></div>
+
+				  </td> 
+            <!--
+EOT;
+}
+print <<<EOT
+-->
+              </tr>
+            <!--
+EOT;
+}
+print <<<EOT
+-->
+            </table><br/>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+            </div>
+        </div>
+    </div>
+    <div class="cleardiv"></div>
+</div>
+<!--
+EOT;
+?>
+-->

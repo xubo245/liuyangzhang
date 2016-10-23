@@ -1,0 +1,66 @@
+<!--
+<?php
+print <<<EOT
+--> 
+<script src="images/default/setday.js"></script>
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/enterprise/form/form.css">
+<div class="mainbanner">{$label[enterprise_form1]}</div>
+<div class="nav_guide">
+   <a href="$webdb[www_url]">Ê×Ò³</a> $GuideFid[$fid]
+</div>
+<div class="MainContainer">
+	<div class="side">
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+document.write('<div id="Index_Login">$Load_Msg</div>');
+document.write('<div style="display:none;"><iframe src="$webdb[www_url]/do/hack.php?hack=login&styletype=introduce&iframeID=Index_Login" width=0 height=0></iframe></div>');
+//-->
+</SCRIPT>
+		<div class="Services">
+        	<div class="head">{$label[enterprise_form2]}</div>
+            <div class="cont">{$label[enterprise_form3]}</div>
+        </div>
+    </div>
+    <div class="main">
+    	<div class="listtitle">
+        	<div class="head">$fidDB[name]</div>
+            <div class="cont">
+<script>
+function upfile(url,name,size,ty){
+	document.getElementById(ty).value=url;
+}
+</script>
+				<div class="about">$fidDB[about]</div>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" id="bigtable">
+                <form name="FORM" method="post" action="?action=$atc" enctype="multipart/form-data">
+<!--
+EOT;
+if($fidDB[usetitle]){print <<<EOT
+-->
+					<tr>
+                    	<td class=tdl>±êÌâ:<span>*</span></td>
+                        <td class=tdr><input type="text" name="postdb[title]" id="atc_title" size="50" value="$rsdb[title]"></td>
+                    </tr>                    
+<!--
+EOT;
+}print <<<EOT
+-->
+					$TempLate
+                    <tr> 
+                      <td class=tdl>&nbsp;</td>
+                      <td class=tdr> <input name="Submit" type="image" src="$webdb[www_url]/images/enterprise/form/subpost.gif" class="sub"/>
+                        <input type="hidden" name="mid" value="$mid">
+                        <input type="hidden" name="id" value="$id">
+                      </td>
+                    </tr>
+                  </form>
+                 </table>  
+            </div>
+        </div>
+    </div>
+    <div class="cleardiv"></div>
+</div>
+<!--
+EOT;
+?>
+-->

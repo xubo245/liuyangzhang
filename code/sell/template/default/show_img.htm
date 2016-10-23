@@ -1,0 +1,54 @@
+<!--
+<?php
+$pics = str_replace("'", "", $urldb);
+$pics = str_replace(",", "|", $pics);
+$titles = str_replace("'", "", $titledb);
+$titles = str_replace(",", "|", $titles);
+print <<<EOT
+-->
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="MainTable">
+  <tr> 
+    <td width="100%" height="393" valign="top" class="Main"> 
+       
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" class="dragTable" id="viewarticle">
+        <tr> 
+          <td class="head"> 
+            <h3 class="L"></h3>
+            <span class="TAG">Õº∆¨‰Ø¿¿</span> 
+            <h3 class="R"></h3>
+          </td>
+        </tr>
+        <tr> 
+          <td class="middle"><a name="look"></a>
+             <table width="900" border="0" align="center" cellpadding="0" cellspacing="0">
+              <tr>
+                <td>
+                	<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=10,0,0,0" width="900" height="500" align="middle">
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="allowFullScreen" value="false" />
+<param name="movie" value="$webdb[www_url]/images/enterprise/sell/pcautojdt.swf" />
+<param name="quality" value="high" />
+<param name="bgcolor" value="#000000" />
+<param name="wmode" value="transparent">
+<param name="flashvars" value="titles=$titles&imgs=$pics&links=$pics" />
+<embed src="$webdb[www_url]/images/enterprise/sell/pcautojdt.swf" flashvars="titles=$titles&imgs=$pics&links=$pics" width="900" height="500" align="middle" quality="high" bgcolor="#000000" allowscriptaccess="sameDomain" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/go/getflashplayer_cn" wmode="transparent" /> 
+					</object>
+                </td>
+              </tr>
+            </table>
+		  </td>
+        </tr>
+        <tr> 
+          <td class="foot"> 
+            <h3 class="L"></h3>
+            <h3 class="R"></h3>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!--
+EOT;
+?>
+-->

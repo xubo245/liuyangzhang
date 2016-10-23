@@ -1,0 +1,111 @@
+<!--
+<?php
+print <<<EOT
+--> 
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/enterprise/hr/showjob.css">
+<div class="mainbanner">{$label[enterprise_hrbencandy1]}</div>
+<div class="nav_guide">
+   <a href="$webdb[www_url]">首页</a>  $GuideFid[$fid]
+</div>
+<div class="MainContainer">
+	<div class="side">
+    	<div class="sortcont">
+        	<div class="head">职位分类</div>
+            <div class="cont">
+<!--
+EOT;
+foreach($Fid_db[0] AS $fkey=>$fvalue){
+$color=$fid==$fkey?" style=\"color:red;\"":'';
+print <<<EOT
+-->
+				<dl>
+            		<dt><a href="list.php?fid=$fkey"{$color}>{$fvalue}</a> </dt>
+					<dd>
+<!--
+EOT;
+foreach($Fid_db[$fkey] AS $key=>$value){
+$color=$fid==$key?" style=\"color:red;\"":'';
+print <<<EOT
+-->
+						<a href="list.php?fid=$key"{$color}>{$value}</a>  
+<!--
+EOT;
+}print <<<EOT
+-->
+					</dd>
+            	</dl>
+<!--
+EOT;
+}print <<<EOT
+-->
+            </div>
+        </div>
+        <div class="leftadcont">{$label[enterprise_hrbencandy2]}</div>
+        <div class="hotlinecont">
+        	{$label[enterprise_hrbencandy3]}
+        </div>
+    </div>
+    <div class="main">
+    	<div class="listtitle">
+        	<div class="head">职位信息</div>
+            <div class="cont">
+            	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="showjob">
+                  <tr>
+                    <td class="t">招聘职位：</td>
+                    <td class="v">{$rsdb[title]}</td>
+                    <td class="t">工作城市：</td>
+                    <td class="v">{$rsdb[workplace]}</td>
+                  </tr>
+                  <tr>
+                    <td class="t">招聘人数：</td>
+                    <td class="v">{$rsdb[nums]}</td>
+                    <td class="t">工作经验要求：</td>
+                    <td class="v">{$rsdb[wageyear]}</td>
+                  </tr>
+                  <tr>
+                    <td class="t">性别要求：</td>
+                    <td class="v">{$rsdb[asksex]}</td>
+                    <td class="t">学历要求：</td>
+                    <td class="v">{$rsdb[schoo_age]}</td>
+                  </tr>
+                  <tr>
+                    <td class="t">薪水待遇：</td>
+                    <td class="v">{$rsdb[wage]}</td>
+                    <td class="t">结束日期：</td>
+                    <td class="v">{$rsdb[time_over]}</td>
+                  </tr>
+                  <tr>
+                    <td class="t">职位描述：</td>
+                    <td colspan="3" class="v1 ">
+                    	<table width="100%" cellspacing="0" cellpadding="0" style='TABLE-LAYOUT: fixed;WORD-WRAP: break-word'>
+                          <tr> 
+                            <td>$rsdb[content]</td>
+                          </tr>
+                        </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="t">其他：</td>
+                    <td colspan="3" class="v1 ">
+                    	<!--
+EOT;
+if($rsdb['nature']){print <<<EOT
+--> 
+                        <div><span>工作性质：</span>{$rsdb[nature]} </div>      
+                        <!--
+EOT;
+}print <<<EOT
+--><!---->
+                    </td>
+                  </tr>
+                </table>
+                <div class="submit"><a href="apply.php?job=post&id=$id"><img src="$webdb[www_url]/images/enterprise/hr/submit.gif"/></a></div>
+            </div>
+        </div>
+    </div>
+    <div class="cleardiv"></div>
+</div>
+<!--
+EOT;
+?>
+-->

@@ -1,0 +1,236 @@
+<!--
+<?php
+$querya = $db->query("SELECT * FROM {$_pre}pic WHERE id='$id'");
+$MaxNum=$rsdb[picnum] +1;
+$i=0;
+while($rsa = $db->fetch_array($querya)){
+	$i++;
+    $picurl = tempdir($rsa[imgurl]);
+    $titles = addslashes($rsa[name]);
+    $bigimgs .= "<div id=\"Tab$i\"><a href=\"$picurl\" target=\"_blank\"><img src=\"$picurl\" height=\"300\" alt=\"$titles\"></a></div>";
+    $minimgs .= "<span id=\"Span$i\"><img src=\"{$picurl}\" width=\"50\" height=\"50\" onmouseover=\"ShowTab($i,1,$MaxNum)\"></span>";
+}
+print <<<EOT
+-->
+<link rel="stylesheet" type="text/css" href="$webdb[www_url]/images/enterprise/sell/bencandy.css">
+<SCRIPT LANGUAGE="JavaScript" src="$webdb[www_url]/images/enterprise/sell/sliding.js"></SCRIPT>
+<div class="mainbanner">{$label[enterprise_sellbenbanner]}</div>
+<div class="nav_guide">
+   <a href="$webdb[www_url]">首页</a> $GuideFid[$fid]
+</div>
+<div class="MainContainer">
+	<div class="side">
+    	<div class="sortcont">
+        	<div class="head">{$label[enterprise_sellbenh1]}</div>
+            <div class="cont">
+<!--
+EOT;
+foreach($Fid_db[0] AS $key=>$value){
+print <<<EOT
+-->
+            	<dl>
+                	<dt><a href="list.php?fid=$key">$value</a></dt>
+                	
+<!--
+EOT;
+foreach($Fid_db[$key] AS $keys=>$rs){
+print <<<EOT
+-->
+					<dd><a href="list.php?fid=$keys">$rs</a></dd>	
+<!--
+EOT;
+}print <<<EOT
+-->                    
+                </dl>
+<!--
+EOT;
+}print <<<EOT
+-->
+            </div>            
+        </div>
+        <div class="thenewest">
+            <div class="head">{$label[enterprise_sellbenh2]}</div>
+            <div class="cont">{$label[enterprise_sellbent2]}</div>
+        </div>
+    </div>
+    <div class="main">
+    	<div class="listtitle">
+        	<div class="head">$fidDB[name]</div>
+            <div class="cont">
+            	<div class="title">{$rsdb[title]}</div>
+<SCRIPT>
+    //开始最左边的记录下标
+    var b_startIndex=1;
+    //显示5条记录
+    var b_showNum = 4;
+    function brightRollImg(){
+		var imgLength = document.getElementById("brandLength").value ;
+		var endIndex = b_startIndex + b_showNum;
+		if(imgLength >b_showNum && endIndex<imgLength){
+			document.getElementById("Span"+b_startIndex).style.display = "none";
+			document.getElementById("Span"+endIndex).style.display = "inline";
+			b_startIndex += 1; 
+		}
+	} 
+	function bleftRollImg(){
+		var imgLength = document.getElementById("brandLength").value ;
+		var endIndex = b_startIndex + b_showNum - 1;
+		if(b_startIndex>1){
+			b_startIndex -= 1; 
+			document.getElementById("Span"+b_startIndex).style.display = "inline";
+			document.getElementById("Span"+endIndex).style.display = "none";
+		}
+	} 
+</SCRIPT>                
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td class="showimg">
+						<div id="Bigimg">
+                        	$bigimgs                        	
+                        </div>
+                        <div id="Minimg">
+                        	<div class="linkl"><a title="向左" href="javascript:bleftRollImg();"></a></div>
+                            <div class="linkcont">
+                            	<INPUT id=brandLength type=hidden value=$MaxNum>
+                        		$minimgs
+                            </div>
+                            <div class="linkr"><a title="向右" href="javascript:brightRollImg();"></a></div> 
+                        </div>
+<SCRIPT LANGUAGE="JavaScript">ShowTab(1,1,$MaxNum);</SCRIPT> 	
+                    </td>
+ 					<td class="showinfo">
+                        <div class="price">单价：<span>{$rsdb[price]}</span> 元</div>
+                    	<div class="m">发布时间：<span>$rsdb[posttime]</span> </div>
+                        <div class="m">浏览量：<span>{$rsdb[hits]}</span>次</div>
+<!--
+EOT;
+if($rsdb['order_min']){print <<<EOT
+-->
+                    	<div class="m">最小起订：<span>{$rsdb[order_min]} {$rsdb[my_units]}</span></div>
+<!--
+EOT;
+}if($rsdb['order_max']){print <<<EOT
+-->
+                        <div class="m">最大供货：<span>{$rsdb[order_max]} {$rsdb[my_units]}</span></div>
+<!--
+EOT;
+}print <<<EOT
+-->	
+						<div class="m">共<span>{$rsdb[picnum]}</span>图 <a href="job.php?job=show_img&fid=$fid&id=$id" target="_blank">点击查看</a></div>					
+						<div class="sub"><a href="join.php?fid=$fid&cid=$id" target="_blank"><img src="$webdb[www_url]/images/enterprise/sell/submit.gif" /></a></div>
+						
+                    </td>
+                  </tr>
+                </table>
+                <div class="mhead">
+                	<div id="Span101" onmouseover="ShowTab(101,101,104)">详细信息</div>	
+                    <div id="Span102" onmouseover="ShowTab(102,101,104)">相关评论</div>	
+                    <div id="Span103" onmouseover="ShowTab(103,101,104)">注意事项</div>
+                </div>
+                <div class="mcont">
+                	<table width="100%" cellspacing="0" cellpadding="0" style='TABLE-LAYOUT: fixed;WORD-WRAP: break-word' id="Tab101">
+                      <tr> 
+                        <td class="contenta">$rsdb[content]</td>
+                      </tr>
+                    </table>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" id="Tab102">
+                      <tr>
+                        <td>
+                        	<div id="comment"></div>
+                        	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="addcomment">
+                            <tr>
+                                <td class="headb" colspan="2">添加评论</td>
+                            </tr>
+<!--
+EOT;
+$displaystyle = $lfjid ? "style=\"display:none;\"" : "";
+print <<<EOT
+-->
+                            <tr $displaystyle>
+                                <td class="tdl">称　　呼：</td>
+                                <td class="tdr"><input type="text" name="textfield2" id="comment_username" value="$lfjid"></td>
+                            </tr>
+<!--
+EOT;
+if(!$web_admin&&!$groupdb[comment_img]){
+$webdb[yzImgComment]=1;
+print <<<EOT
+-->
+                            <tr>
+                                <td class="tdl">验 证 码：</td>
+                                <td class="tdr">
+                                    <input id="yzImgNum" type="text" name="yzimg" size="8" onFocus="commentyzimg()">
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function commentyzimg(){
+	if(/yzimg\.php/.test(document.getElementById("yz_Img").src)==false){
+		document.getElementById("yz_Img").style.display='';
+		document.getElementById("yz_Img").src='$webdb[www_url]/do/yzimg.php?'+Math.random();
+	}
+	
+}
+document.write('<img border="0" id="yz_Img" name="imageField" onclick="this.src=this.src+Math.random();" src="" style="display:none;">');
+//-->
+</SCRIPT>
+                                </td>
+                            </tr>
+<!--
+EOT;
+}
+print <<<EOT
+-->
+                            <tr>
+                                <td class="tdl">内　　容：</td>
+                                <td class="tdr"><textarea name="textfield" cols="70" rows="8" id="comment_content" onKeyDown="quickpost(event)"></textarea></td>
+                            </tr>
+                            <tr>
+                                <td class="tdl">
+<script language="JavaScript">
+<!--
+getcomment("job.php?job=comment_ajax&fid=$fid&id=$id");
+cnt = 0;
+function quickpost(event)
+{
+	if((event.ctrlKey && event.keyCode == 13)||(event.altKey && event.keyCode == 83))
+	{
+		cnt++;
+		if (cnt==1){
+			post_comment();
+		}else{
+			alert('内容正在提交...');
+		}
+	}	
+}
+function post_comment(){
+	postcomment('job.php?job=comment_ajax&action=post&fid=$fid&id=$id','$webdb[yzImgComment]');
+	if(document.getElementById("yz_Img")!=null){
+		//document.getElementById("yz_Img").src="$webdb[www_url]/do/yzimg.php?"+Math.random();;
+		document.getElementById("yz_Img").src='';
+		document.getElementById("yz_Img").style.display='none';
+	}
+}
+//-->
+</script>
+                                </td>
+                                <td class="tdr"><input type="button" id="comment_submit" name="Submit" value="提交" onClick="post_comment();"></td>
+                            </tr>
+                         </table>	
+                        </td>
+                      </tr>
+                    </table>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" id="Tab103">
+                      <tr>
+                        <td class="notecont">{$label[enterprise_sellbent3]}</td>
+                      </tr>
+                    </table>
+<SCRIPT LANGUAGE="JavaScript">ShowTab(101,101,104);</SCRIPT> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cleardiv"></div>
+</div>
+<!--
+EOT;
+?>
+-->
